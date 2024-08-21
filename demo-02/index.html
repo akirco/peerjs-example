@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>peerjs</title>
+  </head>
+  <body class="flex h-screen flex-col items-center p-8 gap-5">
+    <div
+      class="flex flex-col w-full max-w-2xl rounded-md bg-zinc-200 p-4 gap-3"
+    >
+      <label for="Id"> Id: </label>
+      <input
+        id="mid"
+        type="text"
+        name="Id"
+        class="border border-zinc-900 rounded disabled:bg-gray-300"
+        disabled
+      />
+      <label for="connectId"> connectId: </label>
+      <input
+        id="oid"
+        type="text"
+        name="connectId"
+        class="border border-zinc-900 rounded"
+      />
+      <button
+        id="conn"
+        class="bg-zinc-900 text-white font-medium px-2 py-1 rounded-md"
+      >
+        connect
+      </button>
+    </div>
+
+    <div
+      id="msgBox"
+      class="flex flex-col w-full max-w-2xl rounded-md bg-zinc-200 p-4 h-full gap-3"
+    >
+      <div
+        id="mine"
+        class="text-left bg-indigo-500 rounded-md p-5 flex justify-between"
+      >
+        <p class="text-black p-2 rounded-md bg-white">mine</p>
+        <div class="text-amber-200 font-medium"></div>
+      </div>
+      <div
+        id="other"
+        class="text-end bg-amber-500 rounded-md p-5 flex justify-between"
+      >
+        <div class="text-amber-200 font-medium"></div>
+        <p class="text-black p-2 rounded-md bg-white">other</p>
+      </div>
+    </div>
+    <div class="inline-flex gap-2">
+      <input id="msg" type="text" class="border border-zinc-900 rounded" />
+      <button
+        id="send"
+        class="bg-zinc-900 text-white font-medium px-2 py-1 rounded-md"
+      >
+        send
+      </button>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/peerjs@1.5.0/dist/peerjs.min.js"></script>
+    <script defer src="./index.js"></script>
+  </body>
+</html>
